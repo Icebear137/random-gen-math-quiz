@@ -32,6 +32,16 @@ const Quiz = () => {
         let random_answer1 = Math.floor(Math.random() * 10);
         let random_answer2 = Math.floor(Math.random() * 10);
         let random_answer3 = Math.floor(Math.random() * 10);
+        // check if random answers are the same as the answer and each other and if so, generate new random answers
+        while (random_answer1 == answer || random_answer1 == random_answer2 || random_answer1 == random_answer3) {
+            random_answer1 = Math.floor(Math.random() * 10);
+        }
+        while (random_answer2 == answer || random_answer2 == random_answer1 || random_answer2 == random_answer3) {
+            random_answer2 = Math.floor(Math.random() * 10);
+        }
+        while (random_answer3 == answer || random_answer3 == random_answer1 || random_answer3 == random_answer2) {
+            random_answer3 = Math.floor(Math.random() * 10);
+        }
         // let random_answer1 = answer + Math.floor(Math.random() * 4);
         // let random_answer2 = answer + Math.floor(Math.random() * 4);
         // let random_answer3 = answer + Math.floor(Math.random() * 4);
